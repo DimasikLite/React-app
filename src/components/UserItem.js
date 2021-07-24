@@ -3,7 +3,7 @@ import React, { useCallback } from "react";
 export const UserItem = ({ user, showModal }) => {
   const showUserData = useCallback(() => {
     showModal(user);
-  }, []);
+  }, [showModal, user]);
 
   return (
     <li onClick={showUserData} className="item" key={user.login.uuid}>
